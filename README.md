@@ -57,7 +57,7 @@ when you have finished the configs, the payload will be and saved as **Output/ f
 Thanks 
        [@mame82 for P4wnP1](https://twitter.com/mame82)
        <br>
-       [@Seytonic for his goold explanations and tutorials on P4wnP1](https://twitter.com/Seytonic)
+       [@Seytonic for his good explanations and tutorials on P4wnP1](https://twitter.com/Seytonic)
        <br>
        [@BeBoxoS for share his projects and ideas](https://twitter.com/BeBoXoS)
        <br>
