@@ -4,19 +4,17 @@
 
 Simple support to convert a ducky script keyboard language into a keyboard language for P4wnP1 A.L.O.A. and generate payloads for the web interface of P4wnP1 A.L.O.A.
 
-![menu](https://user-images.githubusercontent.com/47247782/59144500-56e0ea80-89d9-11e9-9838-cca199a155b8.png)
-
+![menu2](https://user-images.githubusercontent.com/47247782/59147177-c61a0700-89f8-11e9-8e80-4c1ef1781085.png)
 ##  1\) Editor Ducky script / P4wnP1 A.L.O.A
 
-![editeur](https://user-images.githubusercontent.com/47247782/59144621-8b08db00-89da-11e9-92a8-c7dc4143783f.png)
+![editor2](https://user-images.githubusercontent.com/47247782/59147170-bc909f00-89f8-11e9-859e-72de33597f09.png)
 
 Enter a Ducky script keyboard keys and press enter to validate a new line, press CTRL c to show the result
 
 
 ## 2\) generate payloads for P4wnP1 A.L.O.A for the web client interface
 
-![payload-windows](https://user-images.githubusercontent.com/47247782/59144934-361a9400-89dd-11e9-8569-60121facdbd2.png)
-
+![payloadwindows](https://user-images.githubusercontent.com/47247782/59147178-c914f780-89f8-11e9-8059-9c455cab473f.png)
 
 choose the operating system you want to attack, select the payload to configure and generate, enter the layout keyboard like : fr, de, us ..
 
@@ -49,11 +47,10 @@ So I added payloads in layout fr with which the problem was fixed
 <br>
 when you have finished the configs, the payload will be and saved as **Output/ folder** and it displayed this :
 
-![sortit](https://user-images.githubusercontent.com/47247782/59145522-5d755f00-89e5-11e9-924f-8805f2326394.png)
-
+![SORTIT](https://user-images.githubusercontent.com/47247782/59147179-cb775180-89f8-11e9-90f8-787243ebb054.png)
 ## 3\) test P4wnP1 
 
-![test-keyboard](https://user-images.githubusercontent.com/47247782/59145516-4cc4e900-89e5-11e9-95aa-5837b10a2924.png)
+![KEYDETECT](https://user-images.githubusercontent.com/47247782/59147175-c31f1680-89f8-11e9-8ef6-71a039842507.png)
 <br>simple python keyboard detect key press **to test P4wnP1**
 
 ## 4) Credits
@@ -67,7 +64,7 @@ Thanks
 
 ## Installation
 
-![install](https://user-images.githubusercontent.com/47247782/59144498-4fb9dc80-89d9-11e9-82b9-253093eb40b4.png)
+![install2](https://user-images.githubusercontent.com/47247782/59147174-bf8b8f80-89f8-11e9-9288-ff099d72c178.png)
 
 **to install :**
 
