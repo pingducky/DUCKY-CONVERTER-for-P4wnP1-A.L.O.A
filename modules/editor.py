@@ -14,7 +14,7 @@ def editor(): # tool editor function
 
     while 1== 1:
         try:
-	    liste.append(raw_input("\x1b[0m"+" "))
+	    liste.append(raw_input("\x1b[0m"+""))
         except KeyboardInterrupt:
             print("\n")
             for l in liste:
