@@ -19,7 +19,7 @@ def MENU(): # first Menu
     print "(python2.7)"
     print ("\n")
 
-    userChoice = raw_input("\nMENU :\n\nWhat do you want ?\n\n1) editor for translat many ducky/P4wnP1 keyboard keys \n2) generate payload for P4wnP1 A.L.O.A with web client interface \n3) test P4wnP1 with a simple keyboard detect key pressed\n4) Creds\n\n99) exit \n\n>>> ") 
+    userChoice = raw_input("\nMENU :\n\nWhat do you want ?\n\n1) editor for translat many ducky/P4wnP1 keyboard keys \n2) generate payloads for P4wnP1 A.L.O.A with web client interface \n3) test P4wnP1 with a simple keyboard detect key pressed\n4) Creds\n\n99) exit \n\n>>> ") 
 
 
     if userChoice == "1":
